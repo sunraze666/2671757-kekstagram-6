@@ -20,4 +20,4 @@ function palimdrome(str) {
   return str === str.split('').reverse().join('');
 }
 
-console.log(palimdrome('Лёша на полке клопа нашёл ')) // true
+console.log(palimdrome('Лёша на полке клопа нашёл '))
