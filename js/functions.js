@@ -6,12 +6,10 @@ function lenStr(str, maxlength)  {
     return false;
   }
 }
-// Cтрока короче 20 символов
 console.log(lenStr('проверяемая строка', 20))
-// Длина строки ровно 18 символов
 console.log(lenStr('проверяемая строка', 18))
-// Строка длиннее 10 символов
 console.log(lenStr('проверяемая строка', 10))
+
 
 
 function palimdrome(str) {
