@@ -27,9 +27,13 @@ const createComment = (element) => ({
 //Рандомный комментарий
 const getRandomCommets = Array.from({length: getRandomInteger(0, 30)}, createComment);
 
+// Генератор уникальных ID
+let lastId = 0;
+const generateUniqueId = () => ++lastId;
+
 //Описание фотографии
 const createUsers = () => ({
-  idUser: getRandomInteger(1, 25),
+  id: generateUniqueId(),
   url: `photos/${getRandomInteger(1, 25)}.jpg`,
   description: getRandomArrayElements(DESCRIPTIONS),
   likes: getRandomInteger(15, 200),
@@ -37,6 +41,6 @@ const createUsers = () => ({
 });
 
 //Массив с 25 объектами
-const GeneratedUsers = Array.from({length: 25}, createUsers);
+const generatedPhotos = Array.from({length: 25}, createUsers);
 
-
+console.log(generatedPhotos);
